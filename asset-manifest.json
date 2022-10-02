@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/leasing_test/static/css/main.e107ced1.css",
+    "main.js": "/leasing_test/static/js/main.5b04f80e.js",
+    "index.html": "/leasing_test/index.html",
+    "main.e107ced1.css.map": "/leasing_test/static/css/main.e107ced1.css.map",
+    "main.5b04f80e.js.map": "/leasing_test/static/js/main.5b04f80e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e107ced1.css",
+    "static/js/main.5b04f80e.js"
+  ]
+}
