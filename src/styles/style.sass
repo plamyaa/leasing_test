@@ -1,0 +1,309 @@
+$color-orange: #FF9514
+$color-black: #111111
+$color-white: #ffffff
+$color-grey: #575757
+$color-orange-light: rgba(255, 149, 20, 0.4)
+$color-grey-light: #F3F3F4
+$color-grey-light2: #E1E1E1
+$color-disabled: #BCBCBC
+$font-big: 'Nekst'
+$font-small: 'Gilroy'
+
+body
+    max-width: 1440px
+    margin: auto
+
+.App 
+    width: 95%
+    margin: auto
+
+@mixin btn($color, $transition-time)
+    background: $color
+    border-radius: 40px
+    border: 0
+    color: $color-white
+    font-family: $font-small
+    margin: auto
+    height: 48px
+    padding: 12px 24px
+    gap: 10px
+    font-style: normal
+    font-weight: 700
+    font-size: 16px
+    line-height: 24px
+    transition: background-color $transition-time ease-out
+
+
+.btn 
+    width: 100%
+    max-width: 280px
+    @include btn($color-orange, 0.09s)
+    &:hover
+        @include btn($color-black, 0.09s) 
+    &:active
+        @include btn($color-grey, 0s) 
+    &:disabled
+        @include btn($color-orange-light, 0s)
+
+.rotate 
+  animation: rotation 1s infinite linear
+
+@keyframes rotation 
+  from 
+    transform: rotate(0deg)
+  
+  to 
+    transform: rotate(359deg)
+  
+
+
+.input-slider
+    display: flex
+    flex-direction: column
+    width: 100%
+    align-items: center
+    background: $color-grey-light
+    border-radius: 16px
+    position: relative
+    margin-bottom: 28px
+
+    .input-number
+        display: flex
+        align-items: center
+        width: 100%
+        position: relative
+        box-sizing: border-box
+        ::-webkit-outer-spin-button,
+        ::-webkit-inner-spin-button 
+            -webkit-appearance: none
+            margin: 0
+        -moz-appearance: textfield
+        &__value
+            border: 0
+            width: 100%
+            background: $color-grey-light
+            font-family: $font-big
+            font-size: 24px
+            box-sizing: border-box
+            border-radius: 16px
+            padding: 24px 25px
+            color: $color-grey
+
+            &:focus
+                outline: 0
+                border: 2px solid $color-grey-light
+                background: $color-white
+                outline-color: $color-grey-light
+                box-sizing: border-box
+                padding: 22px 23px
+        
+        &__result
+            border: 0
+            width: 100%
+            background: $color-grey-light
+            font-family: $font-big
+            font-size: 24px
+            box-sizing: border-box
+            border-radius: 16px
+            padding: 24px 25px
+            color: $color-grey
+
+            &:focus
+                outline: 0
+                border: 2px solid $color-grey-light
+                background: $color-white
+                outline-color: $color-grey-light
+                box-sizing: border-box
+                padding: 22px 23px
+
+        &__currency
+            font-family: $font-big
+            font-size: 24px
+            box-sizing: border-box
+            position: absolute
+            right: 0
+            z-index: 100
+            padding: 24px 25px
+            line-height: 23px
+            color: $color-grey
+            
+        &__percent
+            width: 85px
+            font-family: $font-big
+            font-size: 24px
+            box-sizing: border-box
+            position: absolute
+            right: 0
+            border: 0
+            border-radius: 16px
+            z-index: 100
+            padding: 16px 18px
+            margin: 0 8px
+            line-height: 23px
+            color: $color-grey
+            background: $color-grey-light2
+
+            &:focus
+                outline: 0
+                border: 0
+                background: $color-white
+                outline-color: $color-grey-light
+                box-sizing: border-box
+                padding: 16px 18px
+
+    .input-range
+        width: 100%
+        padding: 0 25px
+        height: 0px
+        position: relative
+        box-sizing: border-box
+        &__slider
+            z-index: 1000
+            width: 100%
+            position: relative
+            bottom: 14.5px
+            -webkit-appearance: none
+            appearance: none
+            cursor: pointer
+            box-sizing: border-box
+
+            &:disabled
+                &::-webkit-slider-thumb 
+                    background-color: $color-disabled
+                &::-moz-range-thumb 
+                    background-color: $color-disabled
+ 
+            /***** Chrome, Safari, Opera, and Edge Chromium *****/
+            &::-webkit-slider-runnable-track
+                height: 2px
+                
+            /******** Firefox ********/
+            &::-moz-range-track
+                height: 2px
+ 
+            /***** Thumb Styles *****/
+            &::-webkit-slider-thumb 
+                -webkit-appearance: none
+                appearance: none
+                margin-top: -9px
+                background-color: $color-orange
+                height: 20px
+                width: 20px
+                border-radius: 1em
+                &:hover
+                    transform: scale(1.15)
+                    transition: transform 0.09s ease-in-out
+
+            &::-moz-range-thumb 
+                appearance: none
+                border: none
+                margin-top: -9px
+                background-color: $color-orange
+                height: 20px
+                width: 20px
+                border-radius: 1em
+                &:hover
+                    transform: scale(1.15)
+                    transition: transform 0.09s ease-in-out
+
+.header
+    font-family: $font-big
+    font-size: 30px
+    color: $color-black
+
+.default-text
+    font-family: $font-small
+    font-size: 14px
+    color: $color-grey
+    margin: 0 0 10px
+
+.sum-value
+    font-family: $font-big
+    font-size: 30px
+    color: $color-black 
+    margin: 0 0 18px
+
+.sign
+    position: relative
+    bottom: 2px
+    left: 5px
+
+.span-percent 
+    z-index: 1000
+    font-family: $font-big
+    font-size: 24px
+    color: $color-grey
+    position: relative
+    right: 28px
+
+@media (min-width: 768px) 
+    .header
+        font-size: 42px
+    .output
+        display: grid
+        grid-template-columns: 300px 300px
+    .sum-value
+        font-size: 42px
+    .btn
+        font-size: 20px
+        height: 52px
+        &:hover
+            font-size: 20px
+            height: 52px
+        &:active
+            font-size: 20px
+            height: 52px
+        &:disabled
+            font-size: 20px
+            height: 52px
+
+@media (min-width: 1024px)
+    .App 
+        margin-top: 80px
+    
+
+@media (min-width: 1440px)
+    .App
+        margin-top: 120px
+    .btn
+        min-width: 420px 
+        position: relative
+        right: 0
+        bottom: 95px
+        float: right
+        height: 62px
+        font-size: 24px
+        &:hover
+            height: 62px
+            font-size: 24px
+        &:active
+            height: 62px
+            font-size: 24px
+        &:disabled
+            height: 62px
+            font-size: 24px
+    .input-number
+        &__value
+            font-size: 30px !important
+        &__currency
+            font-size: 30px !important
+
+        &__result
+            font-size: 30px !important
+        &__percent
+            font-size: 30px !important
+            padding-left: 14px !important
+    .span-percent 
+        font-size: 30px !important
+        right: 20px
+    .default-text
+        font-size: 18px
+    .sum-value
+        font-size: 50px
+    .inputs
+        display: grid
+        justify-content: space-between
+        grid-template-columns: repeat(3, calc(95%/3))
+        margin-bottom: 25px
+    .output
+        gap: 12.2%
