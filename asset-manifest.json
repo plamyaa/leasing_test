@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/leasing_test/static/css/main.aca96c79.css",
+    "main.css": "/leasing_test/static/css/main.b6a040f1.css",
     "main.js": "/leasing_test/static/js/main.5b04f80e.js",
     "static/media/Nekst-Bold.eot": "/leasing_test/static/media/Nekst-Bold.753a7c4c084c718c0281.eot",
     "static/media/Nekst-Bold.ttf": "/leasing_test/static/media/Nekst-Bold.cab6338caaec418b8de9.ttf",
@@ -47,11 +47,11 @@
     "static/media/Gilroy-Heavy.woff2": "/leasing_test/static/media/Gilroy-Heavy.19b3f6fe15dc6f668d28.woff2",
     "static/media/Gilroy-Regular.woff2": "/leasing_test/static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
     "index.html": "/leasing_test/index.html",
-    "main.aca96c79.css.map": "/leasing_test/static/css/main.aca96c79.css.map",
+    "main.b6a040f1.css.map": "/leasing_test/static/css/main.b6a040f1.css.map",
     "main.5b04f80e.js.map": "/leasing_test/static/js/main.5b04f80e.js.map"
   },
   "entrypoints": [
-    "static/css/main.aca96c79.css",
+    "static/css/main.b6a040f1.css",
     "static/js/main.5b04f80e.js"
   ]
 }
