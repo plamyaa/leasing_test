@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useRef} from "react";
 import { formatNumber } from "../utils";
 
 const InputSliderPercent = ({ disabled, min, max, step, sign, value, setValue, secondValue }) => {
+    const ref = useRef();
     const handleOnChange = (event) => {
         const newValue = event.target.value;
         if (newValue.length > 2)
@@ -29,11 +30,15 @@ const InputSliderPercent = ({ disabled, min, max, step, sign, value, setValue, s
                 className="input-number"
                 onSubmit={handleOnSubmit}
             >
-                <div className="input-number__result">
+                <div
+                    className="input-number__result"
+                    onClick={() => ref.current.focus()}
+                >
                     {formatNumber(secondValue * value / 100)}
                     <span className="sign">{sign}</span>
                 </div>
                 <input
+                    ref={ref}
                     className="input-number__percent"
                     type="text"
                     min={min}
