@@ -6,7 +6,6 @@ $color-orange-light: rgba(255, 149, 20, 0.4)
 $color-grey-light: #F3F3F4
 $color-grey-light2: #E1E1E1
 $color-disabled: #BCBCBC
-$font-big: 'Nekst'
 $font-small: 'Gilroy'
 
 body
@@ -38,6 +37,10 @@ body
     font-weight: 900
     font-size: 24px
 
+@mixin Gilroy
+    font-family: 'Gilroy' 
+
+
 .btn 
     width: 100%
     max-width: 280px
@@ -58,7 +61,6 @@ body
   to 
     transform: rotate(359deg)
   
-
 
 .input-slider
     display: flex
@@ -230,7 +232,7 @@ body
 
 .span-percent 
     z-index: 1000
-    font-family: $font-big
+    @include Nekst-Black
     font-size: 24px
     color: $color-grey
     position: relative
