@@ -33,6 +33,10 @@ body
     line-height: 24px
     transition: background-color $transition-time ease-out
 
+@mixin Nekst-Black 
+    font-family: "Nekst"
+    font-weight: 900
+    font-size: 24px
 
 .btn 
     width: 100%
@@ -51,7 +55,6 @@ body
 @keyframes rotation 
   from 
     transform: rotate(0deg)
-  
   to 
     transform: rotate(359deg)
   
@@ -82,8 +85,7 @@ body
             border: 0
             width: 100%
             background: $color-grey-light
-            font-family: $font-big
-            font-size: 24px
+            @include Nekst-Black
             box-sizing: border-box
             border-radius: 16px
             padding: 24px 25px
@@ -101,8 +103,7 @@ body
             border: 0
             width: 100%
             background: $color-grey-light
-            font-family: $font-big
-            font-size: 24px
+            @include Nekst-Black
             box-sizing: border-box
             border-radius: 16px
             padding: 24px 25px
@@ -117,8 +118,7 @@ body
                 padding: 22px 23px
 
         &__currency
-            font-family: $font-big
-            font-size: 24px
+            @include Nekst-Black
             box-sizing: border-box
             position: absolute
             right: 0
@@ -129,8 +129,7 @@ body
             
         &__percent
             width: 85px
-            font-family: $font-big
-            font-size: 24px
+            @include Nekst-Black
             box-sizing: border-box
             position: absolute
             right: 0
@@ -207,9 +206,10 @@ body
                     transition: transform 0.09s ease-in-out
 
 .header
-    font-family: $font-big
+    @include Nekst-Black
     font-size: 30px
     color: $color-black
+    font-weight: 800
 
 .default-text
     font-family: $font-small
@@ -218,7 +218,7 @@ body
     margin: 0 0 10px
 
 .sum-value
-    font-family: $font-big
+    @include Nekst-Black
     font-size: 30px
     color: $color-black 
     margin: 0 0 18px
