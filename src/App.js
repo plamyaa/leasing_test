@@ -1,4 +1,6 @@
 import './styles/style.sass';
+import '../public/fonts/font/stylesheet.css'
+import '../public/fonts/font-2/stylesheet.css'
 import React from "react";
 import Content from "./components/content"
 

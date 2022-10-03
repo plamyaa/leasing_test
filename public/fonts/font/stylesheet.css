@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Nekst';
+    src: url('Nekst-Regular.eot');
+    src: local('Nekst'), local('Nekst-Regular'),
+        url('Nekst-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Nekst-Regular.woff2') format('woff2'),
+        url('Nekst-Regular.woff') format('woff'),
+        url('Nekst-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nekst';
+    src: url('Nekst-Black.eot');
+    src: local('Nekst Black'), local('Nekst-Black'),
+        url('Nekst-Black.eot?#iefix') format('embedded-opentype'),
+        url('Nekst-Black.woff2') format('woff2'),
+        url('Nekst-Black.woff') format('woff'),
+        url('Nekst-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nekst';
+    src: url('Nekst-Bold.eot');
+    src: local('Nekst Bold'), local('Nekst-Bold'),
+        url('Nekst-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Nekst-Bold.woff2') format('woff2'),
+        url('Nekst-Bold.woff') format('woff'),
+        url('Nekst-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
